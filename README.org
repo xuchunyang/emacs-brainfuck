@@ -1,0 +1,52 @@
+#+TITLE: bf.el
+
+An Emacs Lisp program that translates [[https://en.wikipedia.org/wiki/Brainfuck][Brainfuck]] program to Emacs Lisp
+program then evaluates that.
+
+* Usage
+
+** Function ~(bf S)~
+
+Evaluate string S as brainfuck code. Here is an example to print an ~@~ sign:
+
+#+BEGIN_SRC emacs-lisp
+(bf "++++++++[>++++++++<-]>.")
+     -| @
+     => 64
+#+END_SRC
+
+Note the return value of ~bf~ is undefined.
+
+** Command ~M-x bf-eval-buffer~
+
+Execute current buffer as BF code.
+
+** Command ~M-x bf-eval-region~
+
+Execute the region as BF code.
+
+* Brainfuck code samples
+
+Since it is not easy to write brainfuck code by hand, I would like to
+[[http://beautifulracket.com/bf/intro.html][stolen]] some code samples for testing.
+
+The familiar “Hello World” program in brainfuck:
+
+#+BEGIN_SRC brainfuck
+++++++[>++++++++++++<-]>.
+>++++++++++[>++++++++++<-]>+.
++++++++..+++.>++++[>+++++++++++<-]>.
+<+++[>----<-]>.<<<<<+++[>+++++<-]>.
+>>.+++.------.--------.>>+.
+#+END_SRC
+
+The factorial generator:
+
+#+BEGIN_SRC brainfuck
+>++++++++++>>>+>+[>>>+[-[<<<<<[+<<<<<]>>[[-]>[<<+>+>-]
+<[>+<-]<[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-
+[>[-]>>>>+>+<<<<<<-[>+<-]]]]]]]]]]]>[<+>-]+>>>>>]<<<<<
+[<<<<<]>>>>>>>[>>>>>]++[-<<<<<]>>>>>>-]+>>>>>]<[>++<-]
+<<<<[<[>+<-]<<<<]>>[->[-]++++++[<++++++++>-]>>>>]<<<<<
+[<[>+>+<<-]>.<<<<<]>.>>>>]
+#+END_SRC
