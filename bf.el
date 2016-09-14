@@ -81,7 +81,7 @@
 ;; ========================
 
 ;;   Since it is not easy to write brainfuck code by hand, I would like to
-;;   [stolen] some code samples for testing.
+;;   [steal] some code samples for testing.
 
 ;;   The familiar “Hello World” program in brainfuck:
 
@@ -101,12 +101,12 @@
 ;;   [<[>+>+<<-]>.<<<<<]>.>>>>]
 
 
-;; [stolen] http://beautifulracket.com/bf/intro.html
+;; [steal] http://beautifulracket.com/bf/intro.html
 
 ;;; Code:
 
 
-;; hmm, global variables is not very good
+;; hmm, global variables are not very good
 (defvar bf-vec (make-vector 30000 0))
 (defvar bf-ptr 0)
 

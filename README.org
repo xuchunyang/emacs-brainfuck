@@ -28,7 +28,7 @@ Execute the region as BF code.
 * Brainfuck code samples
 
 Since it is not easy to write brainfuck code by hand, I would like to
-[[http://beautifulracket.com/bf/intro.html][stolen]] some code samples for testing.
+[[http://beautifulracket.com/bf/intro.html][steal]] some code samples for testing.
 
 The familiar “Hello World” program in brainfuck:
 
